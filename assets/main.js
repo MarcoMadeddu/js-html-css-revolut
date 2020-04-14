@@ -1,16 +1,36 @@
+// ** J A V A  S C R I P T **
 
-var menuDropdown = $(".menu-dropdown");
-var showDropdown = $(".f-dropdown");
+$(document).ready(function () {
 
-showDropdown.mouseenter(function(){
+// ** M E N U  D R O P D O W N**
+var toDropdown = $(".with-dropdown");
 
-  var current = $(this).next(".menu-dropdown");
-  current.addClass("flex-active");
-  console.log(current);
 
+toDropdown.mouseenter(function(){
+
+  var menuDropdown = $(this).next(".dropdown");
+  menuDropdown.addClass("flex-active");
 });
 
-showDropdown.mouseleave(function(){
-  var currentDropdown = $(this).next('li ul');
-  currentDropdown.removeClass("flex-active");
+toDropdown.mouseleave(function(){
+
+  var menuDropdown = $(this).next(".dropdown");
+  menuDropdown.removeClass("flex-active");
+});
+
+
+//** L A N G U A G E  A R R O W **//
+var choose = $(".language");
+var arrow = $(".language > i")
+
+choose.click(function(){
+  arrow.removeClass("fas fa-angle-down");
+  arrow.addClass("fas fa-angle-up");
+})
+
+choose.mouseleave(function(){
+  arrow.removeClass("fas fa-angle-up");
+  arrow.addClass("fas fa-angle-down");
+})
+
 });
