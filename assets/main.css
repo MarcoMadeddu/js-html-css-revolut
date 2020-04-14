@@ -4,6 +4,19 @@
   box-sizing: border-box;
 }
 
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+a{
+  color: grey;
+  transition: color 0.2s
+}
+
+a:hover{
+  color: black;
+}
+
 .app{
   display: flex;
   justify-content: center;
@@ -20,20 +33,72 @@
 
 .navbar{
   display: flex;
+  align-items: center;
   width: 100%;
-  border: 1px solid red;
+  height: 40px;
 }
 
 .navbar-left{
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   flex-basis: 30%;
-  height: 30px;
-  border: 1px solid blue;
 }
+
+.navbar-logo{
+  max-width: 100px;
+}
+
+
+.navbar-left-link a{
+  text-decoration: none;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
 
 .navbar-right{
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
   flex-basis: 70%;
-  height: 30px;
-  border: 1px solid red;
+}
+
+.navbar-right .menu-inline li{
+  display: inline-block;
+  list-style: none;
+}
+
+.navbar-right .menu-inline a{
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.navbar-button{
+  padding: 10px 20px;
+  border-radius: 18px;
+  color: white;
+  background-color: #eb008d;
+  margin-left: 50px;
+}
+
+/* Drop down section */
+.f-dropdown1{
+  position: relative;
+}
+.s-dropdown1{
+  position: absolute;
+  transform: translate(-118px, 10px);
+  display: none;
+}
+
+.menu-dropdown{
+  display: flex;
+  flex-direction: column;
+  box-shadow: inset 0px 0px 5px 3px rgba(0,0,0,0.10);
+  padding: 10px;
+}
+
+.menu-dropdown li{
+  margin: 10px 0;
 }
