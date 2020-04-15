@@ -4,18 +4,17 @@ $(document).ready(function () {
 
 // ** M E N U  D R O P D O W N**
 var toDropdown = $(".with-dropdown");
-
+var navbar = $(".navbar");
+var x = $(".dropdown");
 
 toDropdown.mouseenter(function(){
-
+  x.removeClass("flex-active");
   var menuDropdown = $(this).next(".dropdown");
   menuDropdown.addClass("flex-active");
 });
 
-toDropdown.mouseleave(function(){
-
-  var menuDropdown = $(this).next(".dropdown");
-  menuDropdown.removeClass("flex-active");
+navbar.mouseleave(function(){
+  x.removeClass("flex-active");
 });
 
 
